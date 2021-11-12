@@ -1,0 +1,6 @@
+name,version,license,copyrights,end-ofsupport,dependencies,language,repository,email,URL
+configparser,5.0.1;MIT License
+psycopg2,2.8.6;GNU Library or Lesser General Public License (LGPL)
+psycopg2-binary,2.7.7,GNU Library or Lesser General Public License (LGPL); Zope Public License
+queries,2.1.0,BSD License
+tornado,6.1,Apache Software License

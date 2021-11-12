@@ -1,0 +1,30 @@
+version: '3'
+services:
+  chatcontrolapi:
+    build:
+      context: .
+      dockerfile: ./Dockerfile 
+      args:
+       - https_proxy
+    image: chatcontrolapi
+    volumes:
+     - ./data:/testdata
+    environment:
+      - "POSTGRES_DB=unlockpa" 
+      - "POSTGRES_USER=unlockpa" 
+      - "POSTGRES_PASSWORD=unlockpa" 
+      - "POSTGRES_URL=unlockdb" 
+      - "POSTGRES_PORT=5432" 
+      - "POSTGRES_SCHEMA=unlockpa"
+      
+    ports:
+     - "5100:5100"
+    command: ["python", "main.py", "run", "--host", "0.0.0.0"]
+    networks:
+     - unlockpa_net
+  
+
+networks:
+  unlockpa_net:
+    external: true
+

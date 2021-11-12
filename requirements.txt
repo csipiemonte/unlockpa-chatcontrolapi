@@ -1,0 +1,4 @@
+configparser==5.0.1
+psycopg2-binary==2.7.7
+tornado==6.1
+queries==2.1.0
